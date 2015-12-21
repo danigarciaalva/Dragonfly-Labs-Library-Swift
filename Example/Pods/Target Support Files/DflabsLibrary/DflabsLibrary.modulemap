@@ -1,0 +1,6 @@
+framework module DflabsLibrary {
+  umbrella header "DflabsLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

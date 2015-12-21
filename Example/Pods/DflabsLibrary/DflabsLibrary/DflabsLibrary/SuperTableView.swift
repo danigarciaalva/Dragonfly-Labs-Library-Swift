@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SuperTableView<T: NSObject>: UITableView {
+class SuperTableView<T: NSObject>: UITableView {
 
     var _refreshControl : UIRefreshControl?
     var _emptyView : UIView?

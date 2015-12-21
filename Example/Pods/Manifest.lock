@@ -1,0 +1,19 @@
+PODS:
+  - DflabsLibrary (0.0.1)
+
+DEPENDENCIES:
+  - DflabsLibrary (from `https://github.com/danigarciaalva/Dragonfly-Labs-Library-Swift.git`)
+
+EXTERNAL SOURCES:
+  DflabsLibrary:
+    :git: https://github.com/danigarciaalva/Dragonfly-Labs-Library-Swift.git
+
+CHECKOUT OPTIONS:
+  DflabsLibrary:
+    :commit: b2ce126c1a15d80f8c9100b9cda0b5a611c0914d
+    :git: https://github.com/danigarciaalva/Dragonfly-Labs-Library-Swift.git
+
+SPEC CHECKSUMS:
+  DflabsLibrary: fcd7614da07f081cb7c847224636f83b23a4c5d2
+
+COCOAPODS: 0.39.0
