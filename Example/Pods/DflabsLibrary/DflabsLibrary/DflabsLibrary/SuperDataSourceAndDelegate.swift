@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuperDataSourceAndDelegate<T>: NSObject, UITableViewDataSource, UITableViewDelegate {
+public class SuperDataSourceAndDelegate<T>: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     var _refreshDelegate : PullToRefreshDelegate?
     var _endlessDelegate : EndlessScrollDelegate?
@@ -20,7 +20,7 @@ class SuperDataSourceAndDelegate<T>: NSObject, UITableViewDataSource, UITableVie
     var currentPage : Int = 1
     let threshold = 100.0 // threshold from bottom of tableView
     
-    required init(refreshDelegate: PullToRefreshDelegate, endlessScrollDelegate: EndlessScrollDelegate){
+    required public init(refreshDelegate: PullToRefreshDelegate, endlessScrollDelegate: EndlessScrollDelegate){
         super.init()
         self._refreshDelegate = refreshDelegate
         self._endlessDelegate = endlessScrollDelegate
@@ -52,19 +52,19 @@ class SuperDataSourceAndDelegate<T>: NSObject, UITableViewDataSource, UITableVie
         _tableView?.reloadData()
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         onSelectedItem(items[indexPath.row], position: indexPath.row)
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return cellForRowAtIndexPath(indexPath, item: items[indexPath.row] as T)
     }
 
@@ -76,7 +76,7 @@ class SuperDataSourceAndDelegate<T>: NSObject, UITableViewDataSource, UITableVie
         preconditionFailure("Method not implemented")
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    public func scrollViewDidScroll(scrollView: UIScrollView) {
         if items.count > 0 {
             let contentOffset = scrollView.contentOffset.y
             let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height;

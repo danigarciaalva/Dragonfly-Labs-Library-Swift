@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   DflabsLibrary:
-    :commit: b2ce126c1a15d80f8c9100b9cda0b5a611c0914d
+    :commit: dcca9ea1b60f70f1aabd6f990e302d511e552ce1
     :git: https://github.com/danigarciaalva/Dragonfly-Labs-Library-Swift.git
 
 SPEC CHECKSUMS:
